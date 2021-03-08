@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ProductFilters.ProductFilterFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="15dp"
+        android:paddingTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView156"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filters"
+            android:textColor="@color/green_500"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView157"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Price Range"
+            android:textColor="@color/green_500"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textView156"
+            app:layout_constraintTop_toBottomOf="@+id/textView156" />
+
+        <TextView
+            android:id="@+id/textView158"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="$50.0"
+            android:textColor="@color/green_500"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textView157"
+            app:layout_constraintTop_toBottomOf="@+id/textView157" />
+
+        <TextView
+            android:id="@+id/textView159"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$1000.0"
+            android:textColor="@color/green_500"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/textView158"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView158" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/seekBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            app:layout_constraintEnd_toEndOf="@+id/textView159"
+            app:layout_constraintStart_toStartOf="@+id/textView158"
+            app:layout_constraintTop_toBottomOf="@+id/textView158"
+            app:thumbColor="@color/green_500"
+            app:thumbRadius="12dp"
+            app:trackColor="@color/green_500"
+            app:trackHeight="6dp" />
+
+        <TextView
+            android:id="@+id/textView160"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Sizes :"
+            android:textColor="@color/green_500"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/seekBar"
+            app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView160">
+
+            <RadioButton
+                android:id="@+id/checkedTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/bg_checked_size"
+                android:button="@null"
+                android:checked="true"
+                android:elevation="3dp"
+                android:padding="10dp"
+                android:text="XS"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/checkedTextView2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView160" />
+
+            <RadioButton
+                android:id="@+id/checkedTextView2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/bg_checked_size"
+                android:button="@null"
+                android:checked="false"
+                android:elevation="3dp"
+                android:gravity="center"
+                android:text="S"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/checkedTextView"
+                app:layout_constraintEnd_toStartOf="@+id/checkedTextView3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/checkedTextView"
+                app:layout_constraintTop_toTopOf="@+id/checkedTextView" />
+
+            <RadioButton
+                android:id="@+id/checkedTextView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/bg_checked_size"
+                android:button="@null"
+                android:checked="false"
+                android:elevation="3dp"
+                android:gravity="center"
+                android:text="M"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/checkedTextView2"
+                app:layout_constraintEnd_toStartOf="@+id/checkedTextView4"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/checkedTextView2"
+                app:layout_constraintTop_toTopOf="@+id/checkedTextView2" />
+
+            <RadioButton
+                android:id="@+id/checkedTextView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/bg_checked_size"
+                android:button="@null"
+                android:checked="false"
+                android:elevation="3dp"
+                android:gravity="center"
+                android:text="L"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/checkedTextView3"
+                app:layout_constraintEnd_toStartOf="@+id/checkedTextView5"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/checkedTextView3"
+                app:layout_constraintTop_toTopOf="@+id/checkedTextView3" />
+
+            <RadioButton
+                android:id="@+id/checkedTextView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/bg_checked_size"
+                android:button="@null"
+                android:checked="false"
+                android:elevation="3dp"
+                android:gravity="center"
+                android:text="XL"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/checkedTextView4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/checkedTextView4"
+                app:layout_constraintTop_toTopOf="@+id/checkedTextView4" />
+        </RadioGroup>
+
+
+        <TextView
+            android:id="@+id/textView162"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Brands"
+            android:textColor="@color/green_500"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/radioGroup"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+        <TextView
+            android:id="@+id/textView163"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select All"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/textView162"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView162" />
+
+        <View
+            android:id="@+id/divider11"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="@+id/textView163"
+            app:layout_constraintStart_toStartOf="@+id/textView162"
+            app:layout_constraintTop_toBottomOf="@+id/textView162" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout11"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/product_filter_cancel_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider11">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/brandRecylerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:itemCount="9"
+                        tools:listitem="@layout/item_brand" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/product_filter_cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button_border"
+            android:elevation="8dp"
+            android:paddingHorizontal="40dp"
+            android:paddingVertical="13dp"
+            android:text="Clear"
+            android:textColor="@color/green_500"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/product_filter_apply_btn"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout11" />
+
+        <TextView
+            android:id="@+id/product_filter_apply_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/atm_card_bg"
+            android:backgroundTint="@color/green_500"
+            android:elevation="8dp"
+            android:paddingHorizontal="40dp"
+            android:paddingVertical="13dp"
+            android:text="Apply"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/product_filter_cancel_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/product_filter_cancel_btn"
+            app:layout_constraintTop_toTopOf="@+id/product_filter_cancel_btn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

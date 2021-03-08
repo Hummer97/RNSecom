@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.Shipping.ShippingFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="20dp">
+
+
+
+    <TextView
+        android:id="@+id/textView100"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Step 1"
+        android:textColor="@color/gray"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView101"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/textView101"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shipping"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/shipping_fullname_txt"
+        app:layout_constraintStart_toStartOf="@+id/textView100"
+        app:layout_constraintTop_toBottomOf="@+id/textView100" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/textView113"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Eric Wizard"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView114"
+        app:layout_constraintStart_toStartOf="@+id/textView39"
+        app:layout_constraintTop_toBottomOf="@+id/textView112" />
+
+    <TextView
+        android:id="@+id/textView104"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Mobile Nomber"
+        android:textColor="@color/gry_100"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView105"
+        app:layout_constraintStart_toStartOf="@+id/textView103"
+        app:layout_constraintTop_toBottomOf="@+id/textView103" />
+
+    <TextView
+        android:id="@+id/textView110"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="City"
+        android:textColor="@color/gry_100"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView111"
+        app:layout_constraintStart_toStartOf="@+id/textView109"
+        app:layout_constraintTop_toBottomOf="@+id/textView109" />
+
+    <TextView
+        android:id="@+id/textView108"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Country"
+        android:textColor="@color/gry_100"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView109"
+        app:layout_constraintStart_toStartOf="@+id/textView107"
+        app:layout_constraintTop_toBottomOf="@+id/textView107" />
+
+    <TextView
+        android:id="@+id/textView106"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Address"
+        android:textColor="@color/gry_100"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView107"
+        app:layout_constraintStart_toStartOf="@+id/textView105"
+        app:layout_constraintTop_toBottomOf="@+id/textView105" />
+
+    <TextView
+        android:id="@+id/textView114"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Full Name"
+        android:textColor="@color/gry_100"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView115"
+        app:layout_constraintStart_toStartOf="@+id/textView113"
+        app:layout_constraintTop_toBottomOf="@+id/textView113" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/textView105"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+918798765654"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView106"
+        app:layout_constraintStart_toStartOf="@+id/textView31"
+        app:layout_constraintTop_toBottomOf="@+id/textView104" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/textView107"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Greater Noida"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView108"
+        app:layout_constraintStart_toStartOf="@+id/textView33"
+        app:layout_constraintTop_toBottomOf="@+id/textView106" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/textView103"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Eric Wizard"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView104"
+        app:layout_constraintStart_toStartOf="@+id/textView29"
+        app:layout_constraintTop_toBottomOf="@+id/shipping_fullname_txt" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/textView111"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Eric Wizard"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView112"
+        app:layout_constraintStart_toStartOf="@+id/textView37"
+        app:layout_constraintTop_toBottomOf="@+id/textView110" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/textView115"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Eric Wizard"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/shipping_continue_btn"
+        app:layout_constraintStart_toStartOf="@+id/textView41"
+        app:layout_constraintTop_toBottomOf="@+id/textView114" />
+
+    <TextView
+        android:id="@+id/shipping_fullname_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Full Name"
+        android:textColor="@color/gry_100"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView103"
+        app:layout_constraintStart_toStartOf="@+id/shapeableImageView"
+        app:layout_constraintTop_toBottomOf="@+id/textView101"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/textView112"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Full Name"
+        android:textColor="@color/gry_100"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView113"
+        app:layout_constraintStart_toStartOf="@+id/textView111"
+        app:layout_constraintTop_toBottomOf="@+id/textView111" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/textView109"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="India"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView110"
+        app:layout_constraintStart_toStartOf="@+id/textView35"
+        app:layout_constraintTop_toBottomOf="@+id/textView108" />
+
+    <Button
+        android:id="@+id/shipping_continue_btn"
+        style="@style/CustomButton"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/atm_card_bg"
+        android:paddingHorizontal="50dp"
+        android:text="Continue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView115"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/textView115"
+        app:layout_constraintTop_toBottomOf="@+id/textView115" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

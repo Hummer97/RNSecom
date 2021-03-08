@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_dashboard">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.rns.rnsecomapp.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.rns.rnsecomapp.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_navigation_dashboard_to_categoriesFragment"
+            app:destination="@id/categoriesFragment" />
+        <action
+            android:id="@+id/action_navigation_dashboard_to_shopFrontFragment"
+            app:destination="@id/shopFrontFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.rns.rnsecomapp.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.rns.rnsecomapp.ui.AllCategories.CategoriesFragment"
+        android:label="fragment_categories"
+        tools:layout="@layout/fragment_categories" >
+        <action
+            android:id="@+id/action_categoriesFragment_to_choseSallerFragment"
+            app:destination="@id/choseSallerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_wishList"
+        android:name="com.rns.rnsecomapp.ui.WishList.WishListFragment"
+        android:label="fragment_wish_list"
+        tools:layout="@layout/fragment_wish_list" />
+    <fragment
+        android:id="@+id/navigation_account"
+        android:name="com.rns.rnsecomapp.ui.Profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_navigation_account_to_paymentHistoryFragment"
+            app:destination="@id/paymentHistoryFragment" />
+        <action
+            android:id="@+id/action_navigation_account_to_walletFragment"
+            app:destination="@id/walletFragment" />
+        <action
+            android:id="@+id/action_navigation_account_to_settingFragment"
+            app:destination="@id/settingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentHistoryFragment"
+        android:name="com.rns.rnsecomapp.ui.PaymentHistory.PaymentHistoryFragment"
+        android:label="fragment_payment_history"
+        tools:layout="@layout/fragment_payment_history" />
+    <fragment
+        android:id="@+id/walletFragment"
+        android:name="com.rns.rnsecomapp.ui.Wallet.WalletFragment"
+        android:label="fragment_wallet"
+        tools:layout="@layout/fragment_wallet" >
+        <action
+            android:id="@+id/action_walletFragment_to_paymentSuccessfulFragment"
+            app:destination="@id/paymentSuccessfulFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.rns.rnsecomapp.ui.Setting.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/shopFrontFragment"
+        android:name="com.rns.rnsecomapp.ui.ShopFront.ShopFrontFragment"
+        android:label="fragment_shop_front"
+        tools:layout="@layout/fragment_shop_front" >
+        <action
+            android:id="@+id/action_shopFrontFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment" />
+        <action
+            android:id="@+id/action_shopFrontFragment_to_productFilterFragment"
+            app:destination="@id/productFilterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailsFragment"
+        android:name="com.rns.rnsecomapp.ui.ProductDetails.ProductDetailsFragment"
+        android:label="fragment_product_details"
+        tools:layout="@layout/fragment_product_details" >
+        <action
+            android:id="@+id/action_productDetailsFragment_to_myBagFragment"
+            app:destination="@id/myBagFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myBagFragment"
+        android:name="com.rns.rnsecomapp.ui.MyBag.MyBagFragment"
+        android:label="fragment_my_bag"
+        tools:layout="@layout/fragment_my_bag" >
+        <action
+            android:id="@+id/action_myBagFragment_to_checkoutFragment"
+            app:destination="@id/checkoutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="com.rns.rnsecomapp.ui.CheckOut.CheckoutFragment"
+        android:label="fragment_checkout"
+        tools:layout="@layout/fragment_checkout" >
+        <action
+            android:id="@+id/action_checkoutFragment_to_shippingFragment"
+            app:destination="@id/shippingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shippingFragment"
+        android:name="com.rns.rnsecomapp.ui.Shipping.ShippingFragment"
+        android:label="fragment_shipping"
+        tools:layout="@layout/fragment_shipping" >
+        <action
+            android:id="@+id/action_shippingFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentSuccessfulFragment"
+        android:name="com.rns.rnsecomapp.ui.CardAddedSuccessful.PaymentSuccessfulFragment"
+        android:label="fragment_payment_successful"
+        tools:layout="@layout/fragment_payment_successful" >
+        <action
+            android:id="@+id/action_paymentSuccessfulFragment_to_navigation_dashboard"
+            app:destination="@id/navigation_dashboard" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.rns.rnsecomapp.ui.Payment.PaymentFragment"
+        android:label="fragment_payment"
+        tools:layout="@layout/fragment_payment" >
+        <action
+            android:id="@+id/action_paymentFragment_to_congratulationsFragment"
+            app:destination="@id/congratulationsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/congratulationsFragment"
+        android:name="com.rns.rnsecomapp.ui.Congratulations.CongratulationsFragment"
+        android:label="fragment_congratulations"
+        tools:layout="@layout/fragment_congratulations" >
+        <action
+            android:id="@+id/action_congratulationsFragment_to_navigation_dashboard"
+            app:destination="@id/navigation_dashboard" />
+    </fragment>
+    <fragment
+        android:id="@+id/choseSallerFragment"
+        android:name="com.rns.rnsecomapp.ui.Saller.ChoseSallerFragment"
+        android:label="fragment_chose_saller"
+        tools:layout="@layout/fragment_chose_saller" >
+        <action
+            android:id="@+id/action_choseSallerFragment_to_shopFragment"
+            app:destination="@id/shopFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shopFragment"
+        android:name="com.rns.rnsecomapp.ui.Shop.ShopFragment"
+        android:label="fragment_shop"
+        tools:layout="@layout/fragment_shop" />
+    <fragment
+        android:id="@+id/productFilterFragment"
+        android:name="com.rns.rnsecomapp.ui.ProductFilters.ProductFilterFragment"
+        android:label="fragment_product_filter"
+        tools:layout="@layout/fragment_product_filter" >
+        <action
+            android:id="@+id/action_productFilterFragment_to_shopFrontFragment"
+            app:destination="@id/shopFrontFragment" />
+    </fragment>
+</navigation>
