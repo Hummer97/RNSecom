@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_navigation_dashboard_to_shopFrontFragment"
             app:destination="@id/shopFrontFragment" />
+        <action
+            android:id="@+id/action_navigation_dashboard_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment" />
     </fragment>
 
     <fragment
@@ -154,7 +157,7 @@
     </fragment>
     <fragment
         android:id="@+id/choseSallerFragment"
-        android:name="com.rns.rnsecomapp.ui.Saller.ChoseSallerFragment"
+        android:name="com.rns.rnsecomapp.ui.Seller.ChoseSallerFragment"
         android:label="fragment_chose_saller"
         tools:layout="@layout/fragment_chose_saller" >
         <action

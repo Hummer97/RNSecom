@@ -1,8 +1,8 @@
-package com.rns.rnsecomapp.ui.AllCategories
+package com.rns.rnsecomapp.ui.LogIn
 
 import com.rns.rnsecomapp.base.BasePresenter
 
-class CategoriesPresenter(view: CategoriesFragment):BasePresenter<CategoriesView>(view) {
+class LogInPersenter(view: LoginActivity):BasePresenter<LogInView>(view) {
     override fun initObservable() {
 
     }

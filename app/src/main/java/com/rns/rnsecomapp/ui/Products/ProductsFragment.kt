@@ -18,7 +18,7 @@ class ProductsFragment : BaseFragment<ProductsView,ProductsPresenter>(),Products
     }
 
     override fun onViewReady(savedInstanceState: Bundle?) {
-        TODO("Not yet implemented")
+
     }
 
 }

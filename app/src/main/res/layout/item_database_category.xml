@@ -12,16 +12,19 @@
         android:id="@+id/constraintLayout9"
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:elevation="3dp"
         android:background="@drawable/rectangle_bg"
         android:backgroundTint="@color/blue_400"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/imageView9"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/item_dashboard_categories_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            app:shapeAppearanceOverlay="@style/RoundedSquare1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -31,12 +34,16 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
-        android:id="@+id/textView93"
-        android:layout_width="wrap_content"
+        android:id="@+id/item_dashboard_categories_title"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:text="Fashion"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textAlignment="center"
+        android:paddingHorizontal="4dp"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

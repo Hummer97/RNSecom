@@ -1,4 +1,4 @@
-package com.rns.rnsecomapp.ui.Saller
+package com.rns.rnsecomapp.ui.Seller
 
 import com.rns.rnsecomapp.base.BaseView
 

@@ -1,8 +1,8 @@
-package com.rns.rnsecomapp.ui.home
+package com.rns.rnsecomapp.ui.Seller.Promoted_Sellers
 
 import com.rns.rnsecomapp.base.BasePresenter
 
-class HomePresenter(view: HomeFragment):BasePresenter<HomeView>(view) {
+class PromotedSellersPresenter(view:PromotedSellersFragment):BasePresenter<PromotedSellersView>(view) {
     override fun initObservable() {
 
     }
@@ -12,8 +12,6 @@ class HomePresenter(view: HomeFragment):BasePresenter<HomeView>(view) {
     }
 
     override fun onViewReady() {
-        //getView().setDtat().toString()
 
     }
-
 }

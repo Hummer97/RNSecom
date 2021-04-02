@@ -16,4 +16,5 @@
     <color name="pink_100">#F8BBD0</color>
     <color name="pink_400">#EC407A</color>
     <color name="gry_100">#E6E5E5</color>
+    <color name="transparent_white">#DAFFFFFF</color>
 </resources>

@@ -1,4 +1,4 @@
-package com.rns.rnsecomapp.ui.Saller
+package com.rns.rnsecomapp.ui.Seller
 
 import android.content.Context
 import android.view.LayoutInflater

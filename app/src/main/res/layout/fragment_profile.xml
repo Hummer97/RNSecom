@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Welcome Back"
-            android:textSize="18sp"
+            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView5" />
@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Hedwig W. Arnold"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/textView24"
             app:layout_constraintStart_toStartOf="@+id/textView24"
@@ -67,7 +67,7 @@
             android:paddingHorizontal="15dp"
             android:paddingVertical="20dp"
             android:text="Balance"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -79,7 +79,7 @@
             android:paddingHorizontal="15dp"
             android:paddingVertical="20dp"
             android:text="Order History"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/profile_balance"
             app:layout_constraintTop_toBottomOf="@+id/divider" />
@@ -91,7 +91,7 @@
             android:paddingHorizontal="15dp"
             android:paddingVertical="20dp"
             android:text="Settings"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/profile_order_history"
             app:layout_constraintTop_toBottomOf="@+id/divider2" />

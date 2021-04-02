@@ -3,69 +3,86 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/shop_frant_main_layout"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp"
+    android:layout_marginHorizontal="15dp"
+    android:layout_marginVertical="10dp"
     android:background="@drawable/rectangle_bg"
     android:backgroundTint="@color/white"
-    android:elevation="6dp"
-    android:padding="10dp">
+    android:elevation="6dp">
 
-    <ImageView
-        android:id="@+id/imageView14"
-        android:layout_width="160dp"
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/item_product_img"
+        android:layout_width="match_parent"
         android:layout_height="160dp"
+        android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/RoundedSquare"
         app:srcCompat="@drawable/pic4" />
 
-    <TextView
-        android:id="@+id/textView136"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item_product_sub_container"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="UNITED DENIM Slim Men Black Jeans"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView137"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView14" />
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/item_product_img">
 
-    <TextView
-        android:id="@+id/textView137"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="USD 69.99"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/ratingBar3"
-        app:layout_constraintStart_toStartOf="@+id/textView136"
-        app:layout_constraintTop_toBottomOf="@+id/textView136" />
+        <TextView
+            android:id="@+id/item_product_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="UNITED DENIM Slim Men Black Jeans"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/item_product_price"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_product_sub_container" />
 
-    <RatingBar
-        android:id="@+id/ratingBar3"
-        style="@style/customRatingBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:rating="4.5"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView138"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
-        app:layout_constraintStart_toStartOf="@+id/textView137"
-        app:layout_constraintTop_toBottomOf="@+id/textView137" />
+        <TextView
+            android:id="@+id/item_product_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="USD 69.99"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toTopOf="@+id/item_product_rate"
+            app:layout_constraintStart_toStartOf="@+id/item_product_title"
+            app:layout_constraintTop_toBottomOf="@+id/item_product_title" />
 
-    <TextView
-        android:id="@+id/textView138"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="(68)"
-        app:layout_constraintBottom_toBottomOf="@+id/ratingBar3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/ratingBar3"
-        app:layout_constraintTop_toTopOf="@+id/ratingBar3" />
+        <RatingBar
+            android:id="@+id/item_product_rate"
+            style="@style/customRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:rating="4.5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/item_product_review"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="@+id/item_product_price"
+            app:layout_constraintTop_toBottomOf="@+id/item_product_price" />
+
+        <TextView
+            android:id="@+id/item_product_review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(68)"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/item_product_rate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/item_product_rate"
+            app:layout_constraintTop_toTopOf="@+id/item_product_rate" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

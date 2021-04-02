@@ -18,7 +18,6 @@ class StoreProfileFragment : BaseFragment<StoreProfileView,StoreProfilePresenter
     }
 
     override fun onViewReady(savedInstanceState: Bundle?) {
-        TODO("Not yet implemented")
     }
 
 }

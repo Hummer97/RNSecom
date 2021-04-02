@@ -10,33 +10,34 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingVertical="20dp">
+        android:paddingTop="20dp"
+        android:paddingBottom="80dp">
 
-    <TextView
-        android:id="@+id/payment_static_txt_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="15dp"
-        android:layout_marginTop="8dp"
-        android:text="Step 2"
-        android:textColor="@color/gray"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/payment_static_txt_2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.45"
-        app:layout_constraintVertical_chainStyle="packed" />
+        <TextView
+            android:id="@+id/payment_static_txt_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="8dp"
+            android:text="Step 2"
+            android:textColor="@color/gray"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/payment_static_txt_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.45"
+            app:layout_constraintVertical_chainStyle="packed" />
 
-    <TextView
-        android:id="@+id/payment_static_txt_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Payment"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/payment_recyclerview"
-        app:layout_constraintStart_toStartOf="@+id/payment_static_txt_1"
-        app:layout_constraintTop_toBottomOf="@+id/payment_static_txt_1" />
+        <TextView
+            android:id="@+id/payment_static_txt_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/payment_recyclerview"
+            app:layout_constraintStart_toStartOf="@+id/payment_static_txt_1"
+            app:layout_constraintTop_toBottomOf="@+id/payment_static_txt_1" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/payment_recyclerview"
@@ -53,19 +54,19 @@
         tools:itemCount="3"
         tools:listitem="@layout/item_payment" />
 
-    <TextView
-        android:id="@+id/payment_static_txt_3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="or purchese by:"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/payment_paypal_pay_btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/payment_recyclerview" />
+        <TextView
+            android:id="@+id/payment_static_txt_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="or purchese by:"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/payment_paypal_pay_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/payment_recyclerview" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/payment_paypal_pay_btn"

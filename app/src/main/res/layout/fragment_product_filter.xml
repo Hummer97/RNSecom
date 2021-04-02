@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,6 +11,7 @@
         android:layout_height="match_parent"
         android:paddingHorizontal="15dp"
         android:paddingTop="20dp"
+        android:paddingBottom="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -21,7 +22,7 @@
             android:layout_height="wrap_content"
             android:text="Filters"
             android:textColor="@color/green_500"
-            android:textSize="30sp"
+            android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -30,10 +31,10 @@
             android:id="@+id/textView157"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="24dp"
             android:text="Price Range"
             android:textColor="@color/green_500"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/textView156"
             app:layout_constraintTop_toBottomOf="@+id/textView156" />
@@ -45,6 +46,7 @@
             android:layout_marginTop="16dp"
             android:text="$50.0"
             android:textColor="@color/green_500"
+            android:textSize="12sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/textView157"
             app:layout_constraintTop_toBottomOf="@+id/textView157" />
@@ -55,6 +57,7 @@
             android:layout_height="wrap_content"
             android:text="$1000.0"
             android:textColor="@color/green_500"
+            android:textSize="12sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/textView158"
             app:layout_constraintEnd_toEndOf="parent"
@@ -69,9 +72,9 @@
             app:layout_constraintStart_toStartOf="@+id/textView158"
             app:layout_constraintTop_toBottomOf="@+id/textView158"
             app:thumbColor="@color/green_500"
-            app:thumbRadius="12dp"
+            app:thumbRadius="10dp"
             app:trackColor="@color/green_500"
-            app:trackHeight="6dp" />
+            app:trackHeight="4dp" />
 
         <TextView
             android:id="@+id/textView160"
@@ -80,7 +83,7 @@
             android:layout_marginTop="16dp"
             android:text="Sizes :"
             android:textColor="@color/green_500"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/seekBar"
             app:layout_constraintTop_toBottomOf="@+id/seekBar" />
@@ -91,6 +94,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:orientation="horizontal"
+            android:gravity="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView160">
@@ -104,16 +108,12 @@
                 android:button="@null"
                 android:checked="true"
                 android:elevation="3dp"
+                android:gravity="center"
                 android:padding="10dp"
                 android:text="XS"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@+id/checkedTextView2"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintHorizontal_chainStyle="packed"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView160" />
+                android:textColor="@drawable/radio_text_selector"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <RadioButton
                 android:id="@+id/checkedTextView2"
@@ -127,13 +127,9 @@
                 android:elevation="3dp"
                 android:gravity="center"
                 android:text="S"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/checkedTextView"
-                app:layout_constraintEnd_toStartOf="@+id/checkedTextView3"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/checkedTextView"
-                app:layout_constraintTop_toTopOf="@+id/checkedTextView" />
+                android:textColor="@drawable/radio_text_selector"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <RadioButton
                 android:id="@+id/checkedTextView3"
@@ -147,13 +143,9 @@
                 android:elevation="3dp"
                 android:gravity="center"
                 android:text="M"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/checkedTextView2"
-                app:layout_constraintEnd_toStartOf="@+id/checkedTextView4"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/checkedTextView2"
-                app:layout_constraintTop_toTopOf="@+id/checkedTextView2" />
+                android:textColor="@drawable/radio_text_selector"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <RadioButton
                 android:id="@+id/checkedTextView4"
@@ -167,13 +159,9 @@
                 android:elevation="3dp"
                 android:gravity="center"
                 android:text="L"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/checkedTextView3"
-                app:layout_constraintEnd_toStartOf="@+id/checkedTextView5"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/checkedTextView3"
-                app:layout_constraintTop_toTopOf="@+id/checkedTextView3" />
+                android:textColor="@drawable/radio_text_selector"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <RadioButton
                 android:id="@+id/checkedTextView5"
@@ -187,13 +175,9 @@
                 android:elevation="3dp"
                 android:gravity="center"
                 android:text="XL"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/checkedTextView4"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/checkedTextView4"
-                app:layout_constraintTop_toTopOf="@+id/checkedTextView4" />
+                android:textColor="@drawable/radio_text_selector"
+                android:textSize="14sp"
+                android:textStyle="bold" />
         </RadioGroup>
 
 
@@ -204,7 +188,7 @@
             android:layout_marginTop="16dp"
             android:text="Brands"
             android:textColor="@color/green_500"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/radioGroup"
             app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
@@ -214,7 +198,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Select All"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/textView162"
             app:layout_constraintEnd_toEndOf="parent"
@@ -233,7 +217,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout11"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="280dp"
             app:layout_constraintBottom_toTopOf="@+id/product_filter_cancel_btn"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -261,7 +245,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        tools:itemCount="9"
+                        tools:itemCount="5"
                         tools:listitem="@layout/item_brand" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -283,7 +267,7 @@
             android:paddingVertical="13dp"
             android:text="Clear"
             android:textColor="@color/green_500"
-            android:textSize="20dp"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/product_filter_apply_btn"
             app:layout_constraintHorizontal_bias="0.5"
@@ -301,7 +285,7 @@
             android:paddingVertical="13dp"
             android:text="Apply"
             android:textColor="@color/white"
-            android:textSize="20dp"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="@+id/product_filter_cancel_btn"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -311,4 +295,4 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

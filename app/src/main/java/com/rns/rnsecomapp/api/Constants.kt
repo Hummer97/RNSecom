@@ -3,7 +3,7 @@ package com.rns.rnsecomapp.api
 class Constants {
     companion object {
         var DeviceName =""
-        const val BASE_URL = "http://devbox.bizbrolly.com:8915/api/"
+        const val BASE_URL = "https://rnsinfotecherp.com/rnsecom/public/"
         var DeviceId: String = ""
         var HEADER_TOKEN = "Basic AR-AUG-ARST-BIZBR-2019OLLY"
         const val LOCATION_REQUEST = 1000
@@ -14,17 +14,11 @@ class Constants {
 
 
 internal object Partials {
-    const val SignUp = "Account/SignUp"
-    const val Login = "Login/Login"
-    const val Logout = "Login/LogOut"
-    const val ForgetPass="Login/ForgetPassword"
-    const val ResetPassword  =""
-    const val VerifyOtp ="Login/VerifyOTP"
-    const val GenrateOTP ="Login/GenrateOTP"
-    const val MyBooking ="User/GetMyBookings"
-    const val GetWalletData = "User/GetWalletDetails"
-    const val GetTransacation = "User/GetTransactionList"
-
+    const val Category = "api/categories"
+    const val Banner = "api/banner"
+    const val Product_List = "api/product-list"
+    const val Login = "api/login"
+    const val Registration = "api/register"
 
 }
 

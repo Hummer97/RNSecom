@@ -1,5 +1,12 @@
 package com.rns.rnsecomapp.api
 
+import com.rns.rnsecomapp.datamodel.UserData
+import com.rns.rnsecomapp.ui.AllCategories.CategoriesModel
+import com.rns.rnsecomapp.ui.ShopFront.ShopFrontModel
+import com.rns.rnsecomapp.ui.SignUp.RegisteredUserData
+import com.rns.rnsecomapp.ui.dashboard.BannerDataClass
+import io.reactivex.Observable
+
 class WebServiceRequests {
     companion object {
         private var apiService: ApiService? = null
@@ -13,19 +20,36 @@ class WebServiceRequests {
             apiService = ApiClient.getClient()!!.create(ApiService::class.java)
         }
     }
-//
-//    fun Login(
-//        clientIpAddress: String, clientMachineNumber: String, userName: String,
-//        password: String, facebookId: String, googleId: String
-//    ): Observable<LoginResponseModel> {
-//        val params = HashMap<String, Any>()
-//        params[Constants.Keys.ClientIPAddress] = Constants.DeviceId
-//        params[Constants.Keys.clientMachineName] = Constants.DeviceName
-//        params[Constants.Keys.Username] = userName
-//        params[Constants.Keys.Password] = password
-//        params[Constants.Keys.FacebookId] = facebookId
-//        params[Constants.Keys.GoogleId] = googleId
-//        return apiService!!.login(params)
-//    }
+
+    fun categoary(): Observable<CategoriesModel> {
+        return apiService!!.category()
+    }
+
+    fun banner(): Observable<BannerDataClass>
+    {
+        return apiService!!.banner()
+    }
+    fun arrival():Observable<ShopFrontModel>
+    {
+        return apiService!!.arrival()
+    }
+
+    fun login(user_name:String,password:String):Observable<UserData>
+    {
+        val param = HashMap<String,Any>()
+        param.put("user_name",user_name)
+        param.put("password",password)
+        return apiService!!.login(param)
+    }
+
+    fun registration(user_name: String,email_id: String,password: String,mobile_no: String):Observable<RegisteredUserData>
+    {
+        val param = HashMap<String,Any>()
+        param.put("name",user_name)
+        param.put("email",email_id)
+        param.put("password",password)
+        param.put("phone",mobile_no)
+        return apiService!!.registration(param)
+    }
 
 }

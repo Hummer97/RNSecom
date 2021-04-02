@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.Shop.ShopFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingHorizontal="15dp"
-        android:paddingTop="15dp">
+        android:paddingTop="15dp"
+        tools:context=".ui.Shop.ShopFragment">
 
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imageView13"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:layout_marginStart="12dp"
             android:layout_marginTop="16dp"
             android:scaleType="fitXY"
@@ -31,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:text="Nike Offical"
-            android:textSize="20sp"
+            android:textSize="14sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/textView131"
             app:layout_constraintStart_toEndOf="@+id/imageView13"
@@ -44,6 +42,7 @@
             android:layout_height="wrap_content"
             android:text="Demo Data"
             android:textColor="@color/green_500"
+            android:textSize="12sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/imageView13"
             app:layout_constraintStart_toStartOf="@+id/textView130"
@@ -54,12 +53,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="12dp"
-            android:text="+ Follow"
             android:background="@drawable/atm_card_bg"
+            android:backgroundTint="@color/green_500"
             android:paddingHorizontal="15dp"
             android:paddingVertical="3dp"
-            android:backgroundTint="@color/green_500"
+            android:text="+ Follow"
             android:textColor="@color/white"
+            android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="@+id/textView131"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView130"
@@ -75,59 +75,110 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView13" />
 
-        <TextView
-            android:id="@+id/textView133"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Shop Front"
-            android:textColor="@color/green_500"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/textView134"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/divider9" />
+        <!--        <TextView-->
+        <!--            android:id="@+id/textView133"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="16dp"-->
+        <!--            android:text="Shop Front"-->
+        <!--            android:textColor="@color/green_500"-->
+        <!--            android:textSize="14sp"-->
+        <!--            android:textStyle="bold"-->
+        <!--            android:visibility="visible"-->
+        <!--            app:layout_constraintEnd_toStartOf="@+id/textView134"-->
+        <!--            app:layout_constraintHorizontal_bias="0.5"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/divider9" />-->
 
-        <TextView
-            android:id="@+id/textView134"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="Products"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/textView133"
-            app:layout_constraintEnd_toStartOf="@+id/textView135"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView133"
-            app:layout_constraintTop_toTopOf="@+id/textView133" />
+        <!--        <TextView-->
+        <!--            android:id="@+id/textView134"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="16dp"-->
+        <!--            android:text="Products"-->
+        <!--            android:textSize="14sp"-->
+        <!--            android:textStyle="bold"-->
+        <!--            android:visibility="visible"-->
+        <!--            app:layout_constraintBottom_toBottomOf="@+id/textView133"-->
+        <!--            app:layout_constraintEnd_toStartOf="@+id/textView135"-->
+        <!--            app:layout_constraintHorizontal_bias="0.5"-->
+        <!--            app:layout_constraintStart_toEndOf="@+id/textView133"-->
+        <!--            app:layout_constraintTop_toTopOf="@+id/textView133" />-->
 
-        <TextView
-            android:id="@+id/textView135"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="Store Profile"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/textView134"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView134"
-            app:layout_constraintTop_toTopOf="@+id/textView134" />
+        <!--        <TextView-->
+        <!--            android:id="@+id/textView135"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="16dp"-->
+        <!--            android:text="Store Profile"-->
+        <!--            android:textSize="14sp"-->
+        <!--            android:textStyle="bold"-->
+        <!--            android:visibility="visible"-->
+        <!--            app:layout_constraintBottom_toBottomOf="@+id/textView134"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintHorizontal_bias="0.5"-->
+        <!--            app:layout_constraintStart_toEndOf="@+id/textView134"-->
+        <!--            app:layout_constraintTop_toTopOf="@+id/textView134" />-->
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/Container"
+        <RadioGroup
+            android:id="@+id/radioBtnGroup"
             android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="16dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView133">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/divider9"
+            app:layout_constraintStart_toStartOf="@+id/divider9"
+            app:layout_constraintTop_toBottomOf="@+id/divider9">
+
+            <RadioButton
+                android:id="@+id/shop_fragment_shop_front_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@color/transparent_white"
+                android:checked="true"
+                android:gravity="center"
+                android:text="Shop Front"
+                android:textColor="@drawable/radio_green_txt_selector"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/shop_fragment_product_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@color/transparent_white"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Products"
+                android:textColor="@drawable/radio_green_txt_selector"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/shop_fragment_store_profile_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@color/transparent_white"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Store Profile"
+                android:textColor="@drawable/radio_green_txt_selector"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </RadioGroup>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/shop_fragment_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioBtnGroup">
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>

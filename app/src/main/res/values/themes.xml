@@ -13,8 +13,15 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="CustomButton3" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/white</item>
+    </style>
     <style name="CustomButton" parent="Widget.MaterialComponents.Button">
         <item name="backgroundTint">@color/green_500</item>
+    </style>
+    <style name="CustomButton2" parent="Widget.MaterialComponents.Button">
+        <item name="android:background">@drawable/transparent_bg_bordered</item>
+        <item name="backgroundTint">@color/white</item>
     </style>
     <style name="cardStyle">
         <item name="android:background">#2196F3</item>
@@ -34,10 +41,20 @@
     </style>
     <style name="Widget.Rns.bordered.button" parent="Widget.MaterialComponents.Button">
         <item name="android:backgroundTint">@color/white</item>
-        <item name="android:background">@drawable/button_border</item>
+        <item name="android:background">@drawable/transparent_bg_bordered_button</item>
 
     </style>
     <style name="TextAppearance.Rns.TextInputLayout.HintText" parent="TextAppearance.MaterialComponents.Subtitle2">
         <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="Base.Widget.Design.TabLayout" parent="android:Widget">
+        <item name="tabBackground">@drawable/tab_indicater</item>
+        <item name="tabIndicatorColor">@color/green_500</item>
+        <item name="tabIndicatorHeight">2dp</item>
+    </style>
+    <style name="AapBar" parent="Widget.Design.AppBarLayout">
+        <item name="android:background">@drawable/edit_txt_bg</item>
+        <item name="backgroundTint">@color/white</item>
     </style>
 </resources>

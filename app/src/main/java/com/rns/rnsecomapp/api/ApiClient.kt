@@ -20,7 +20,7 @@ internal object ApiClient {
                 .addInterceptor(interceptor)
                 .addInterceptor { chain ->
                     val newRequest = chain.request().newBuilder()
-                            .addHeader("Authorization", Constants.HEADER_TOKEN)
+                            //.addHeader("Authorization", Constants.HEADER_TOKEN)
                             .addHeader("Content-Type", "application/json")
                             .build()
                     chain.proceed(newRequest)

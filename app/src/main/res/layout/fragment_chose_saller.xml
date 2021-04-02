@@ -6,7 +6,7 @@
     android:paddingTop="20dp"
     android:layout_height="match_parent"
     android:paddingHorizontal="20dp"
-    tools:context=".ui.Saller.ChoseSallerFragment">
+    tools:context=".ui.Seller.ChoseSallerFragment">
 
 
     <TextView
@@ -20,39 +20,79 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView128"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="All Seller"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/textView127"
-        app:layout_constraintTop_toBottomOf="@+id/textView127" />
+<!--    <TextView-->
+<!--        android:id="@+id/textView128"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:text="All Seller"-->
+<!--        android:textSize="16sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/textView127"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView127" />-->
 
-    <TextView
-        android:id="@+id/textView129"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:text="Promoted Seller"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/textView128"
-        app:layout_constraintStart_toEndOf="@+id/textView128"
-        app:layout_constraintTop_toTopOf="@+id/textView128" />
+<!--    <TextView-->
+<!--        android:id="@+id/textView129"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="24dp"-->
+<!--        android:text="Promoted Seller"-->
+<!--        android:textSize="16sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/textView128"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/textView128"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/textView128" />-->
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/seller_recyclerview"
+<!--    <com.google.android.material.appbar.AppBarLayout-->
+<!--        android:id="@+id/chose_seller_appBarLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:background="@color/white"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView127">-->
+
+<!--&lt;!&ndash;        <com.google.android.material.tabs.TabLayout&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/chose_seller_TabLayout"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:tabGravity="center"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:tabIndicatorGravity="stretch"&ndash;&gt;-->
+
+<!--&lt;!&ndash;            app:tabMode="fixed"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:tabSelectedTextColor="@color/white" />&ndash;&gt;-->
+
+<!--    </com.google.android.material.appbar.AppBarLayout>-->
+    <LinearLayout
+        android:id="@+id/chose_seller_appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView127">
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/chose_seller_TabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:tabGravity="center"
+            app:tabIndicatorGravity="stretch"
+            app:tabIndicatorAnimationMode="elastic"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/green_500"/>
+    </LinearLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/chose_seller_viewPager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView128"
-        tools:itemCount="5"
-        tools:listitem="@layout/item_seller" />
+        app:layout_constraintTop_toBottomOf="@+id/chose_seller_appBarLayout" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="8,603"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/textView146"
         app:layout_constraintHorizontal_bias="0.3"
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="China"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/textView145"
         app:layout_constraintEnd_toStartOf="@+id/textView147"
@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:text="100.00%"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/textView146"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,7 +56,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Followers"
-        android:textSize="16sp"
+        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="@+id/textView145"
         app:layout_constraintTop_toBottomOf="@+id/textView145" />
 
@@ -66,7 +66,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="State Location"
-        android:textSize="16sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@+id/textView146"
         app:layout_constraintStart_toStartOf="@+id/textView146"
         app:layout_constraintTop_toBottomOf="@+id/textView146" />
@@ -77,7 +77,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Response Rate"
-        android:textSize="16sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@+id/textView147"
         app:layout_constraintTop_toBottomOf="@+id/textView147" />
 
@@ -87,7 +87,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="About the Company"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView152"
         app:layout_constraintStart_toStartOf="parent"
@@ -99,6 +99,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Men's Nike Revolution 4 Running Shoe Minimal in design, Men's Nike Revolution 4 Running Shoe is made of lightweight, single-layer mesh for breathability and soft foam beneath the foot for revolutionary comfort and responsiveness. "
+        android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/textView153"
         app:layout_constraintStart_toStartOf="@+id/textView151"
         app:layout_constraintTop_toBottomOf="@+id/textView151" />
@@ -109,6 +110,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Mesh upper for optimal breathability. Soft foam midsole delivers lightweight, responsive cushioning. Rubber outsole offers durable traction. Underlays in the vamp and toe tip offer support and structure. Molded pods offer multi-surface traction. Pods flatten on impact then spring back at toe-off creating a piston effect that delivers responsive cushioning. Weight: 8.8oz/252g (men's size 10) Offset: 10mm Last: MR-10"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

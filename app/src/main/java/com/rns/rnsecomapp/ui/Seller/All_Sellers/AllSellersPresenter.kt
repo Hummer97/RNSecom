@@ -1,8 +1,8 @@
-package com.rns.rnsecomapp.ui.Saller
+package com.rns.rnsecomapp.ui.Seller.All_Sellers
 
 import com.rns.rnsecomapp.base.BasePresenter
 
-class ChoseSallerPresenter(view: ChoseSallerFragment):BasePresenter<ChoseSallerView>(view) {
+class AllSellersPresenter(view:AllSellersFragment):BasePresenter<AllSellersView>(view) {
     override fun initObservable() {
 
     }

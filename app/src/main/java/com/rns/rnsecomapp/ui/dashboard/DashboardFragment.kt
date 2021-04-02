@@ -1,21 +1,16 @@
 package com.rns.rnsecomapp.ui.dashboard
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.TextView
-import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.NavAction
-import androidx.navigation.NavController
-import androidx.navigation.NavHostController
+import android.util.Log
 import androidx.navigation.Navigation
-import androidx.recyclerview.widget.RecyclerView
+import com.rns.rnsecomapp.Interfaces.RecyclerViewClickInterface
 import com.rns.rnsecomapp.R
 import com.rns.rnsecomapp.base.BaseFragment
-import com.rns.rnsecomapp.ui.dashboard.adapter.DashBoardAdapter
+import com.rns.rnsecomapp.ui.AllCategories.CategoriesModel
+import com.rns.rnsecomapp.ui.ShopFront.ShopFrontModel
+import com.rns.rnsecomapp.ui.dashboard.adapter.DashBoardArrivalAdapter
+import com.rns.rnsecomapp.ui.dashboard.adapter.DashBoardBannerAdapter
+import com.rns.rnsecomapp.ui.dashboard.adapter.DashBoardCategoryAdapter
 import kotlinx.android.synthetic.main.fragment_dashboard.*
 
 class DashboardFragment : BaseFragment<DashboardView,DashboardPresenter>(),DashboardView {
@@ -29,18 +24,52 @@ class DashboardFragment : BaseFragment<DashboardView,DashboardPresenter>(),Dashb
 
     override fun onViewReady(savedInstanceState: Bundle?) {
 
-        dashboard_categories_rc.adapter = DashBoardAdapter(requireContext(),"Categories")
-        dashboard_banner_rc.adapter = DashBoardAdapter(requireContext(),"Banner")
-        dashboard_arrivals_recyclerView.adapter = DashBoardAdapter(requireContext(),"Arrivals")
+//        dashboard_categories_rc.adapter = DashBoardAdapter(requireContext(),"Categories")
+//        dashboard_banner_rc.adapter = DashBoardAdapter(requireContext(),"Banner")
+//        dashboard_arrivals_recyclerView.adapter = DashBoardAdapter(requireContext(),"Arrivals")
 
         dashboard_view_all_categorie.setOnClickListener {
-          Navigation.findNavController(dashboard_arrivals_recyclerView).navigate(R.id.action_navigation_dashboard_to_categoriesFragment)
+          Navigation.findNavController(dashboard_arrivals_rc).navigate(R.id.action_navigation_dashboard_to_categoriesFragment)
         }
 
         dashboard_view_all_arrivals.setOnClickListener {
             Navigation.findNavController(dashboard_view_all_arrivals).navigate(R.id.action_navigation_dashboard_to_shopFrontFragment)
         }
 
+        presenter?.getCategory()
+        presenter?.getBanner()
+        presenter?.getArrival()
+
+    }
+
+    override fun getBannerResponse(response: BannerDataClass) {
+        dashboard_banner_rc.adapter = DashBoardBannerAdapter(requireContext(),response)
+    }
+
+    override fun getCategoriesResponse(response: CategoriesModel) {
+        Log.d("tag","m"+response)
+        dashboard_categories_rc.adapter = DashBoardCategoryAdapter(requireContext(),response,object : RecyclerViewClickInterface {
+            override fun OnItemClick(position: Int) {
+                Navigation.findNavController(dashboard_categories_rc).navigate(R.id.action_navigation_dashboard_to_categoriesFragment)
+            }
+
+            override fun OnItemLongClick(position: Int) {
+
+            }
+        })
+    }
+
+    override fun getArrivalResponse(response: ShopFrontModel) {
+        dashboard_arrivals_rc.adapter = DashBoardArrivalAdapter(requireContext(),response,object :RecyclerViewClickInterface{
+            override fun OnItemClick(position: Int) {
+                Navigation.findNavController(dashboard_view_all_arrivals).navigate(R.id.action_navigation_dashboard_to_productDetailsFragment)
+            }
+
+            override fun OnItemLongClick(position: Int) {
+
+            }
+
+        })
     }
 
 }

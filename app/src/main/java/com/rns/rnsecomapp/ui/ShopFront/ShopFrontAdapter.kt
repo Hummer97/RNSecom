@@ -5,11 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.rns.rnsecomapp.Interfaces.Constant
 import com.rns.rnsecomapp.Interfaces.RecyclerViewClickInterface
 import com.rns.rnsecomapp.R
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.item_category.view.*
 import kotlinx.android.synthetic.main.item_product.view.*
 
-class ShopFrontAdapter(val context : Context, val mRecyclerViewClickInterface: RecyclerViewClickInterface ): RecyclerView.Adapter<ShopFrontAdapter.MyViewHolder>() {
+class ShopFrontAdapter(val context : Context,private val product:ShopFrontModel,val mRecyclerViewClickInterface: RecyclerViewClickInterface ): RecyclerView.Adapter<ShopFrontAdapter.MyViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -24,13 +27,16 @@ class ShopFrontAdapter(val context : Context, val mRecyclerViewClickInterface: R
     }
 
     override fun getItemCount(): Int {
-        return 10
+        return product.productList!!.size
     }
 
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bind(position:Int)
         {
+            itemView.item_product_title.text = product.productList?.get(position)?.productName
+            Picasso.with(context).load(Constant.BASE_URL+ product.productList?.get(position)?.productImage).placeholder(R.drawable.pic4).into(itemView.item_product_img)
+            itemView.item_product_price.text = product.productList?.get(position)?.price
             itemView.shop_frant_main_layout.setOnClickListener {
                 mRecyclerViewClickInterface.OnItemClick(position)
             }
