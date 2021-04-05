@@ -7,6 +7,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.NavController
+import androidx.navigation.NavDestination
+import androidx.navigation.NavDirections
 import androidx.navigation.Navigation
 import com.android.volley.Request
 import com.android.volley.Response
@@ -25,6 +28,7 @@ import kotlinx.android.synthetic.main.fragment_shop_front.*
 import org.json.JSONException
 
 class ShopFrontFragment : BaseFragment<ShopFrontView,ShopFrontPresenter>(),ShopFrontView {
+    private lateinit var mNavController:NavController
     override fun getContentView(): Int {
         return R.layout.fragment_shop_front
     }
@@ -34,6 +38,7 @@ class ShopFrontFragment : BaseFragment<ShopFrontView,ShopFrontPresenter>(),ShopF
     }
 
     override fun onViewReady(savedInstanceState: Bundle?) {
+        mNavController = Navigation.findNavController(requireView())
         showProgressDialog("Please Wait...")
        // ProductListAPI()
         shop_front_filter_btn.setOnClickListener {
@@ -46,9 +51,15 @@ class ShopFrontFragment : BaseFragment<ShopFrontView,ShopFrontPresenter>(),ShopF
     override fun getProduct(response: ShopFrontModel) {
         shop_front_recyclerView.adapter = ShopFrontAdapter(requireContext(),response,object : RecyclerViewClickInterface{
             override fun OnItemClick(position: Int) {
-                Navigation.findNavController(shop_front_recyclerView).navigate(R.id.action_shopFrontFragment_to_productDetailsFragment)
-            }
+                var id:String = response.productList!!.get(position).productsId.toString()
 
+                var action: NavDirections = ShopFrontFragmentDirections.actionShopFrontFragmentToProductDetailsFragment(id)
+                mNavController.navigate(action)
+
+
+//                Navigation.findNavController(shop_front_recyclerView).navigate(R.id.action_shopFrontFragment_to_productDetailsFragment)
+
+            }
             override fun OnItemLongClick(position: Int) {
 
             }

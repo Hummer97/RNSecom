@@ -12,19 +12,34 @@
         android:paddingBottom="80dp">
 
 
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/viewPager2"
+        <ImageView
+            android:id="@+id/product_details_wish_list_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/ic_baseline_favorite_24"
+            android:backgroundTint="@color/gray"
+            app:layout_constraintBottom_toBottomOf="@+id/product_details_best_Seller"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/product_details_best_Seller" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/product_details_image"
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:background="@drawable/pic1"
+            android:orientation="horizontal"
+            android:elevation="10dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_product_details_image"
+            tools:itemCount="3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-        </androidx.viewpager2.widget.ViewPager2>
+        </androidx.recyclerview.widget.RecyclerView>
 
         <TextView
-            android:id="@+id/textView100"
+            android:id="@+id/product_details_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
@@ -33,23 +48,23 @@
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/viewPager2" />
+            app:layout_constraintTop_toBottomOf="@+id/product_details_image" />
 
         <TextView
-            android:id="@+id/textView101"
+            android:id="@+id/product_details_short_discription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="Y3 Supporters jersey"
             android:textSize="12sp"
-            app:layout_constraintStart_toStartOf="@+id/textView100"
-            app:layout_constraintTop_toBottomOf="@+id/textView100" />
+            app:layout_constraintStart_toStartOf="@+id/product_details_title"
+            app:layout_constraintTop_toBottomOf="@+id/product_details_title" />
 
         <TextView
-            android:id="@+id/textView120"
+            android:id="@+id/product_details_best_Seller"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="32dp"
+            android:layout_marginEnd="8dp"
             android:background="@drawable/atm_card_bg"
             android:backgroundTint="@color/green_500"
             android:paddingHorizontal="15dp"
@@ -57,19 +72,19 @@
             android:text="Best Seller"
             android:textColor="@color/white"
             android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView100"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView100" />
+            app:layout_constraintBottom_toBottomOf="@+id/product_details_title"
+            app:layout_constraintEnd_toStartOf="@+id/product_details_wish_list_btn"
+            app:layout_constraintTop_toTopOf="@+id/product_details_title" />
 
     <RatingBar
-        android:id="@+id/ratingBar2"
+        android:id="@+id/product_details_rating"
         style="@style/customRatingBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:rating="4"
-        app:layout_constraintStart_toStartOf="@+id/textView101"
-        app:layout_constraintTop_toBottomOf="@+id/textView101" />
+        app:layout_constraintStart_toStartOf="@+id/product_details_short_discription"
+        app:layout_constraintTop_toBottomOf="@+id/product_details_short_discription" />
 
         <TextView
             android:id="@+id/product_details_description"
@@ -78,9 +93,9 @@
             android:layout_marginTop="16dp"
             android:text="Black and pink printed woven wrap dress with tie-up detail, has a v-neck, three-quarter sleeves, concealed zip closure, an attached lining, and flared hem"
             android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="@+id/textView120"
-            app:layout_constraintStart_toStartOf="@+id/ratingBar2"
-            app:layout_constraintTop_toBottomOf="@+id/ratingBar2" />
+            app:layout_constraintEnd_toEndOf="@+id/product_details_best_Seller"
+            app:layout_constraintStart_toStartOf="@+id/product_details_rating"
+            app:layout_constraintTop_toBottomOf="@+id/product_details_rating" />
 
         <TextView
             android:id="@+id/textView104"
@@ -96,7 +111,7 @@
 
 
         <RadioGroup
-            android:id="@+id/textView105"
+            android:id="@+id/product_details_radio_group"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -108,7 +123,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView104">
 
             <RadioButton
-                android:id="@+id/radioButton"
+                android:id="@+id/product_details_radio_xs_btn"
                 android:layout_width="40dp"
                 android:layout_height="33dp"
                 android:background="@drawable/radio_selector"
@@ -120,7 +135,7 @@
                 android:textSize="12sp" />
 
             <RadioButton
-                android:id="@+id/radioButton2"
+                android:id="@+id/product_details_radio_s_btn"
                 android:layout_width="40dp"
                 android:layout_height="33dp"
                 android:background="@drawable/radio_selector"
@@ -132,7 +147,7 @@
                 android:textSize="12sp" />
 
             <RadioButton
-                android:id="@+id/radioButton3"
+                android:id="@+id/product_details_radio_m_btn"
                 android:layout_width="40dp"
                 android:layout_height="33dp"
                 android:background="@drawable/radio_selector"
@@ -144,7 +159,7 @@
                 android:textSize="12sp" />
 
             <RadioButton
-                android:id="@+id/radioButton4"
+                android:id="@+id/product_details_radio_l_btn"
                 android:layout_width="40dp"
                 android:layout_height="33dp"
                 android:background="@drawable/radio_selector"
@@ -155,7 +170,7 @@
                 android:textColor="@drawable/radio_text_selector" />
 
             <RadioButton
-                android:id="@+id/radioButton5"
+                android:id="@+id/product_details_radio_xl_btn"
                 android:layout_width="40dp"
                 android:layout_height="33dp"
                 android:background="@drawable/radio_selector"
@@ -167,7 +182,7 @@
                 android:textSize="12sp" />
 
             <RadioButton
-                android:id="@+id/radioButton6"
+                android:id="@+id/product_details_radio_xxl_btn"
                 android:layout_width="40dp"
                 android:layout_height="33dp"
                 android:background="@drawable/radio_selector"
@@ -189,7 +204,7 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView105" />
+            app:layout_constraintTop_toBottomOf="@+id/product_details_radio_group" />
 
         <TextView
             android:id="@+id/textView112"
@@ -257,19 +272,23 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView112" />
 
-    <TextView
-        android:id="@+id/product_details_quantity_count_dicress_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="-"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/product_details_quantity_count_txt"
-        app:layout_constraintEnd_toStartOf="@+id/product_details_quantity_count_txt"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/product_details_quantity_count_txt" />
+        <TextView
+            android:id="@+id/product_details_quantity_count_dicress_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/normal_borderd_bg"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:paddingHorizontal="7dp"
+            android:text="-"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/product_details_quantity_count_txt"
+            app:layout_constraintEnd_toStartOf="@+id/product_details_quantity_count_txt"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/product_details_quantity_count_txt" />
 
         <TextView
             android:id="@+id/product_details_quantity_count_txt"
@@ -277,30 +296,33 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:text="0"
-            android:textSize="24sp"
+            android:text="1"
+            android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/product_details_quantity_count_incress_btn"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/product_details_quantity_count_dicress_btn"
             app:layout_constraintTop_toBottomOf="@+id/textView115" />
 
-    <TextView
-        android:id="@+id/product_details_quantity_count_incress_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="+"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/product_details_quantity_count_txt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/product_details_quantity_count_txt"
-        app:layout_constraintTop_toTopOf="@+id/product_details_quantity_count_txt" />
+        <TextView
+            android:id="@+id/product_details_quantity_count_incress_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="+"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:background="@drawable/normal_borderd_bg"
+            android:includeFontPadding="false"
+            android:paddingHorizontal="7dp"
+            app:layout_constraintBottom_toBottomOf="@+id/product_details_quantity_count_txt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/product_details_quantity_count_txt"
+            app:layout_constraintTop_toTopOf="@+id/product_details_quantity_count_txt" />
 
         <TextView
-            android:id="@+id/textView119"
+            android:id="@+id/product_details_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="$120"
@@ -328,7 +350,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/textView119"
+            app:layout_constraintStart_toEndOf="@+id/product_details_price"
             app:layout_constraintTop_toBottomOf="@+id/product_details_quantity_count_txt" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

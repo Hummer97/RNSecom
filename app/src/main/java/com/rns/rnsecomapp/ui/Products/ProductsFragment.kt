@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.rns.rnsecomapp.R
 import com.rns.rnsecomapp.base.BaseFragment
+import com.rns.rnsecomapp.datamodel.CategoryWiseProductModel
+import okhttp3.ResponseBody
 
 class ProductsFragment : BaseFragment<ProductsView,ProductsPresenter>(),ProductsView {
     override fun getContentView(): Int {
@@ -18,6 +20,11 @@ class ProductsFragment : BaseFragment<ProductsView,ProductsPresenter>(),Products
     }
 
     override fun onViewReady(savedInstanceState: Bundle?) {
+
+    }
+
+
+    override fun getProducrListData(responseBody: CategoryWiseProductModel) {
 
     }
 

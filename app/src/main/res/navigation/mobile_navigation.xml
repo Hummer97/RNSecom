@@ -6,12 +6,6 @@
     app:startDestination="@id/navigation_dashboard">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.rns.rnsecomapp.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
-
-    <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.rns.rnsecomapp.ui.dashboard.DashboardFragment"
         android:label="@string/title_dashboard"
@@ -25,6 +19,9 @@
         <action
             android:id="@+id/action_navigation_dashboard_to_productDetailsFragment"
             app:destination="@id/productDetailsFragment" />
+        <action
+            android:id="@+id/action_navigation_dashboard_to_myBagFragment"
+            app:destination="@id/myBagFragment" />
     </fragment>
 
     <fragment
@@ -100,6 +97,9 @@
         <action
             android:id="@+id/action_productDetailsFragment_to_myBagFragment"
             app:destination="@id/myBagFragment" />
+        <argument
+            android:name="id"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/myBagFragment"

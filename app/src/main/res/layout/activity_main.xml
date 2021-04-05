@@ -19,34 +19,55 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <ImageView
-                android:id="@+id/imageView14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView16"
-                app:layout_constraintHorizontal_chainStyle="spread_inside"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/imageView16"
-                app:srcCompat="@drawable/ic_baseline_menu" />
 
             <ImageView
-                android:id="@+id/imageView16"
+                android:id="@+id/main_activity_toolbar_notification_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView17"
-                app:layout_constraintEnd_toStartOf="@+id/imageView17"
-                app:layout_constraintTop_toTopOf="@+id/imageView17"
+                app:layout_constraintBottom_toBottomOf="@+id/main_activity_toolbar_add_cart_layout"
+                app:layout_constraintEnd_toStartOf="@+id/main_activity_toolbar_add_cart_layout"
+                app:layout_constraintTop_toTopOf="@+id/main_activity_toolbar_add_cart_layout"
                 app:srcCompat="@drawable/ic_baseline_notifications" />
-
-            <ImageView
-                android:id="@+id/imageView17"
+            
+            
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/main_activity_toolbar_add_cart_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_baseline_shopping_cart" />
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/main_activity_toolbar_add_cart_btn"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_baseline_shopping_cart" />
+
+                <TextView
+                    android:id="@+id/main_activity_toolbar_add_cart_count"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/edit_txt_bg"
+                    android:backgroundTint="#D32F2F"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="6sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/main_activity_toolbar_add_cart_btn"
+                    app:layout_constraintEnd_toEndOf="@+id/main_activity_toolbar_add_cart_btn"
+                    app:layout_constraintStart_toEndOf="@+id/main_activity_toolbar_add_cart_btn"
+                    app:layout_constraintTop_toTopOf="@+id/main_activity_toolbar_add_cart_btn" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

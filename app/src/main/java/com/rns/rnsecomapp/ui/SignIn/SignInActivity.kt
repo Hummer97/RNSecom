@@ -7,7 +7,8 @@ import com.bb.bigbrotheruser.base.BaseActivity
 import com.google.android.material.snackbar.Snackbar
 import com.rns.rnsecomapp.MainActivity
 import com.rns.rnsecomapp.R
-import com.rns.rnsecomapp.datamodel.UserData
+import com.rns.rnsecomapp.SharedPrefManager.SharedPrefManager
+import com.rns.rnsecomapp.datamodel.UserDataClass
 import kotlinx.android.synthetic.main.activity_sign_in.*
 
 class SignInActivity : BaseActivity<SignInView, SignInPresenter>(),SignInView {
@@ -66,20 +67,21 @@ class SignInActivity : BaseActivity<SignInView, SignInPresenter>(),SignInView {
 
     }
 
-    override fun getLoginResponse(response: UserData) {
+    override fun getLoginResponse(response: UserDataClass) {
         if(response.status == 200)
         {
-            Snackbar.make(signIn_user_id,response.msg.toString(),Snackbar.LENGTH_LONG).show()
+            Snackbar.make(signIn_user_id, response.msg.toString(), Snackbar.LENGTH_LONG).show()
+            SharedPrefManager.getInstance(applicationContext).userLogin(response.user)
             intent = Intent(applicationContext, MainActivity::class.java)
             startActivity(intent)
         }
         else if(response.status == 400)
         {
-            Snackbar.make(signIn_user_id,response.msg.toString(),Snackbar.LENGTH_LONG).show()
+            Snackbar.make(signIn_user_id, response.msg.toString(), Snackbar.LENGTH_LONG).show()
         }
         else
         {
-            Snackbar.make(signIn_user_id,"Somethings went wrong!",Snackbar.LENGTH_LONG).show()
+            Snackbar.make(signIn_user_id, "Somethings went wrong!", Snackbar.LENGTH_LONG).show()
         }
     }
 }

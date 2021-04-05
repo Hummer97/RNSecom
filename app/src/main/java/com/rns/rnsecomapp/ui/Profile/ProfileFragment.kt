@@ -7,11 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import com.rns.rnsecomapp.R
+import com.rns.rnsecomapp.SharedPrefManager.SharedPrefManager
 import com.rns.rnsecomapp.base.BaseFragment
 import kotlinx.android.synthetic.main.fragment_profile.*
 
 
 class ProfileFragment : BaseFragment<ProfileView,ProfilePresenter>(),ProfileView {
+    private lateinit var sharedPrefManager: SharedPrefManager
     override fun getContentView(): Int {
         return R.layout.fragment_profile
     }
@@ -21,6 +23,7 @@ class ProfileFragment : BaseFragment<ProfileView,ProfilePresenter>(),ProfileView
     }
 
     override fun onViewReady(savedInstanceState: Bundle?) {
+        sharedPrefManager = SharedPrefManager.getInstance(requireContext())
 
         profile_order_history.setOnClickListener {
             Navigation.findNavController(profile_order_history).navigate(R.id.action_navigation_account_to_paymentHistoryFragment)
@@ -32,6 +35,9 @@ class ProfileFragment : BaseFragment<ProfileView,ProfilePresenter>(),ProfileView
 
         profile_setting.setOnClickListener {
             Navigation.findNavController(profile_setting).navigate(R.id.action_navigation_account_to_settingFragment)
+        }
+        profile_logout_btn.setOnClickListener {
+            sharedPrefManager.logout()
         }
 
 

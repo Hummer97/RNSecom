@@ -46,11 +46,17 @@ abstract class ApiObserver<T>(message: String?, view: BaseView): DisposableObser
                 getErrorMessage(responseBody)?.let { view.onUnknownError(it) }
             }
         } else if (e is SocketTimeoutException) {
+
             view.onTimeout()
+
         } else if (e is IOException) {
+
             view.onNetworkError(e.message!!)
+
         } else {
+
             view.onUnknownError(e.message!!)
+
         }
     }
 

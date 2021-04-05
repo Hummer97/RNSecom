@@ -15,8 +15,9 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/my_bag_recyclerview"
             android:layout_width="match_parent"
-            android:layout_height="480dp"
-
+            android:layout_height="wrap_content"
+            android:minHeight="350dp"
+            android:maxHeight="430dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
             app:layout_constraintEnd_toEndOf="parent"
